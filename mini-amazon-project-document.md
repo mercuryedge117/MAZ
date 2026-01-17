@@ -120,12 +120,12 @@
 </tr>
 <tr>
 <td>createAt</td>
-<td>string</td>
+<td>Date</td>
 <td>yes</td>
 </tr>
 <tr>
 <td>updateAt</td>
-<td>string</td>
+<td>Date</td>
 <td>no</td>
 </tr>
 </tbody>

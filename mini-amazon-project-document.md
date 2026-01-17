@@ -119,12 +119,12 @@
 <td>yes</td>
 </tr>
 <tr>
-<td>createAt</td>
+<td>CreateAt</td>
 <td>Date</td>
 <td>yes</td>
 </tr>
 <tr>
-<td>updateAt</td>
+<td>UpdateAt</td>
 <td>Date</td>
 <td>no</td>
 </tr>
@@ -149,8 +149,8 @@
 <ul>
 <li>BODY JSON Schema:
 <ul>
-<li>Role: string (enum type: ADMIN/USER)</li>
-<li>Token: string</li>
+<li>role: string (enum type: ADMIN/USER)</li>
+<li>token: string</li>
 </ul>
 </li>
 </ul>
@@ -175,8 +175,8 @@
 <ul>
 <li>BODY JSON Schema:
 <ul>
-<li>Role: string (enum type: ADMIN/USER)</li>
-<li>Token: string</li>
+<li>role: string (enum type: ADMIN/USER)</li>
+<li>token: string</li>
 </ul>
 </li>
 </ul>
@@ -230,8 +230,8 @@ id: string,<br>
 name: string,<br>
 description: string,<br>
 price: number,<br>
-InStockQuant: number,<br>
-ImageURI: string<br>
+inStockQuant: number,<br>
+imageURI: string<br>
 createAt: Date<br>
 updateAt: Date<br>
 },<br>
@@ -256,8 +256,8 @@ id: string,<br>
 name: string,<br>
 description: string,<br>
 price: number,<br>
-InStockQuant: number,<br>
-ImageURI: string<br>
+inStockQuant: number,<br>
+imageURI: string<br>
 createAt: Date<br>
 updateAt: Date<br>
 }</li>
@@ -281,8 +281,8 @@ id: string,<br>
 name: string,<br>
 description: string,<br>
 price: number,<br>
-InStockQuant: number,<br>
-ImageURI: string<br>
+inStockQuant: number,<br>
+imageURI: string<br>
 createAt: Date<br>
 updateAt: Date<br>
 },<br>
@@ -312,8 +312,8 @@ id: string,<br>
 name: string,<br>
 description: string,<br>
 price: number,<br>
-InStockQuant: number,<br>
-ImageURI: string<br>
+inStockQuant: number,<br>
+imageURI: string<br>
 createAt: Date<br>
 updateAt: Date<br>
 }</li>
@@ -342,8 +342,8 @@ id: string,<br>
 name: string,<br>
 description: string,<br>
 price: number,<br>
-InStockQuant: number,<br>
-ImageURI: string<br>
+inStockQuant: number,<br>
+imageURI: string<br>
 createAt: Date<br>
 updateAt: Date<br>
 }</li>

@@ -270,7 +270,11 @@ updateAt: Date<br>
 </ul>
 <p><strong>Retrive product list paginated &amp; sorted</strong></p>
 <ul>
-<li>GET /api/products?offset={}&amp;limit={}&amp;sortby={}</li>
+<li>GET /api/products?offset={}&amp;limit={}&amp;sortby={}
+<ul>
+<li>SortType: ‘Last’ | ‘PriceAsc’ | ‘PriceDes’</li>
+</ul>
+</li>
 <li>Response
 <ul>
 <li>SUCESS 200

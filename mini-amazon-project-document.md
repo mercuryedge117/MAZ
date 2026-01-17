@@ -72,8 +72,7 @@
 <td>yes</td>
 </tr>
 </tbody>
-</table><p>^---- do we need a name or something else? like createAt etc.</p>
-<h2 id="product">Product</h2>
+</table><h2 id="product">Product</h2>
 
 <table>
 <thead>
@@ -130,8 +129,7 @@
 <td>no</td>
 </tr>
 </tbody>
-</table><p>^---- do we need a name or something else? like createAt etc.</p>
-<h1 id="apis"><strong>APIs</strong></h1>
+</table><h1 id="apis"><strong>APIs</strong></h1>
 <ul>
 <li>Server Side Port Number: 5200</li>
 </ul>
@@ -147,7 +145,16 @@
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 ROLE+JWT</li>
+<li>SUCESS 200
+<ul>
+<li>BODY JSON Schema:
+<ul>
+<li>Role: string (enum type: ADMIN/USER)</li>
+<li>Token: string</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>FAILURE 1 409 Email exists</li>
 <li>FAILURE 2 500 Server Error</li>
 </ul>
@@ -164,7 +171,16 @@
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 ROLE + JWT</li>
+<li>SUCESS 201
+<ul>
+<li>BODY JSON Schema:
+<ul>
+<li>Role: string (enum type: ADMIN/USER)</li>
+<li>Token: string</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>FAILURE 1 404 NOT FOUND USER</li>
 <li>FAILURE 2 400 EMAIL AND PASSWORD NOT MATCH</li>
 <li>FAILURE 3 500  Server Error</li>
@@ -182,7 +198,7 @@
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 OK</li>
+<li>SUCESS 201 Email Sent</li>
 </ul>
 </li>
 </ul>
@@ -193,7 +209,7 @@
 <li>POST /api/auth/signout</li>
 <li>Response
 <ul>
-<li>SUCESS 200  OK</li>
+<li>SUCESS 200 OK</li>
 <li>FAILURE 500  Server Error</li>
 </ul>
 </li>
@@ -206,7 +222,23 @@
 <li>GET /api/products</li>
 <li>Response
 <ul>
-<li>SUCESS 200 List of product (JSON)</li>
+<li>SUCESS 200 Retreived
+<ul>
+<li>BODY JSON Schema:<br>
+[{<br>
+id: string,<br>
+name: string,<br>
+description: string,<br>
+price: number,<br>
+InStockQuant: number,<br>
+ImageURI: string<br>
+createAt: Date<br>
+updateAt: Date<br>
+},<br>
+…<br>
+]</li>
+</ul>
+</li>
 <li>FAILURE 500 Server Error</li>
 </ul>
 </li>
@@ -216,7 +248,21 @@
 <li>GET /api/products/{id}/</li>
 <li>Response
 <ul>
-<li>SUCESS 200 Product object (JSON)</li>
+<li>SUCESS 200 Retreived
+<ul>
+<li>BODY JSON Schema:<br>
+{<br>
+id: string,<br>
+name: string,<br>
+description: string,<br>
+price: number,<br>
+InStockQuant: number,<br>
+ImageURI: string<br>
+createAt: Date<br>
+updateAt: Date<br>
+}</li>
+</ul>
+</li>
 <li>FAILURE 404 Product Not Found</li>
 <li>FAILURE 500 Server Error</li>
 </ul>
@@ -224,10 +270,26 @@
 </ul>
 <p><strong>Retrive product list paginated &amp; sorted</strong></p>
 <ul>
-<li>GET /api/products?page={}&amp;limit={}&amp;sortby={}</li>
+<li>GET /api/products?offset={}&amp;limit={}&amp;sortby={}</li>
 <li>Response
 <ul>
-<li>SUCESS 200 List of Product, paged and sorted (JSON)</li>
+<li>SUCESS 200
+<ul>
+<li>BODY JSON Schema:<br>
+[{<br>
+id: string,<br>
+name: string,<br>
+description: string,<br>
+price: number,<br>
+InStockQuant: number,<br>
+ImageURI: string<br>
+createAt: Date<br>
+updateAt: Date<br>
+},<br>
+…<br>
+] (based on sorted result)</li>
+</ul>
+</li>
 <li>FAILURE 500 Server Error</li>
 </ul>
 </li>
@@ -242,7 +304,21 @@
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 OK</li>
+<li>SUCESS 201 Product Added
+<ul>
+<li>BODY JSON Schema:<br>
+{<br>
+id: string,<br>
+name: string,<br>
+description: string,<br>
+price: number,<br>
+InStockQuant: number,<br>
+ImageURI: string<br>
+createAt: Date<br>
+updateAt: Date<br>
+}</li>
+</ul>
+</li>
 <li>FAILURE 403 You don’t have permission</li>
 <li>FAILURE 500 Server Error</li>
 </ul>
@@ -258,8 +334,22 @@
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 OK</li>
-<li>FAILURE 404 Product Not Found</li>
+<li>SUCESS 201 Product updated
+<ul>
+<li>BODY JSON Schema:<br>
+{<br>
+id: string,<br>
+name: string,<br>
+description: string,<br>
+price: number,<br>
+InStockQuant: number,<br>
+ImageURI: string<br>
+createAt: Date<br>
+updateAt: Date<br>
+}</li>
+</ul>
+</li>
+<li>FAILURE 404 Product not found</li>
 <li>FAILURE 403 You don’t have permission</li>
 <li>FAILURE 500 Server Error</li>
 </ul>
@@ -274,8 +364,8 @@
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 OK</li>
-<li>FAILURE 404 Product Not Found</li>
+<li>SUCESS 204 Product deleted</li>
+<li>FAILURE 404 Product not found</li>
 <li>FAILURE 403 You don’t have permission</li>
 <li>FAILURE 500 Server Error</li>
 </ul>
@@ -286,12 +376,20 @@
 <li>GET /api/products/count</li>
 <li>Response
 <ul>
-<li>SUCESS 200 count of product</li>
+<li>SUCESS 200 Retreived
+<ul>
+<li>BODY JSON Schema:
+<ul>
+<li>Count: number</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>FAILURE 500 Server Error</li>
 </ul>
 </li>
 </ul>
-<p><strong>Search for specific products</strong></p>
+<p><strong>Search for specific products (WIP)</strong></p>
 <ul>
 <li>GET /api/products/search?q={}</li>
 <li>Response

@@ -84,11 +84,6 @@
 </thead>
 <tbody>
 <tr>
-<td>id</td>
-<td>string</td>
-<td>yes</td>
-</tr>
-<tr>
 <td>Name</td>
 <td>string</td>
 <td>yes</td>
@@ -149,7 +144,7 @@
 <ul>
 <li>BODY JSON Schema:
 <ul>
-<li>role: string (enum type: ADMIN/USER)</li>
+<li>role: string (enum type: ADMIN/REGULAR)</li>
 <li>token: string</li>
 </ul>
 </li>
@@ -175,7 +170,7 @@
 <ul>
 <li>BODY JSON Schema:
 <ul>
-<li>role: string (enum type: ADMIN/USER)</li>
+<li>role: string (enum type: ADMIN/REGULAR)</li>
 <li>token: string</li>
 </ul>
 </li>
@@ -226,7 +221,7 @@
 <ul>
 <li>BODY JSON Schema:<br>
 [{<br>
-id: string,<br>
+_id: string,<br>
 name: string,<br>
 description: string,<br>
 price: number,<br>
@@ -252,7 +247,7 @@ updateAt: Date<br>
 <ul>
 <li>BODY JSON Schema:<br>
 {<br>
-id: string,<br>
+_id: string,<br>
 name: string,<br>
 description: string,<br>
 price: number,<br>
@@ -281,7 +276,7 @@ updateAt: Date<br>
 <ul>
 <li>BODY JSON Schema:<br>
 [{<br>
-id: string,<br>
+_id: string,<br>
 name: string,<br>
 description: string,<br>
 price: number,<br>
@@ -312,7 +307,7 @@ updateAt: Date<br>
 <ul>
 <li>BODY JSON Schema:<br>
 {<br>
-id: string,<br>
+_id: string,<br>
 name: string,<br>
 description: string,<br>
 price: number,<br>
@@ -342,7 +337,7 @@ updateAt: Date<br>
 <ul>
 <li>BODY JSON Schema:<br>
 {<br>
-id: string,<br>
+_id: string,<br>
 name: string,<br>
 description: string,<br>
 price: number,<br>

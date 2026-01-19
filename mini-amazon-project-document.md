@@ -298,7 +298,17 @@ updateAt: Date<br>
 <li>POST /api/products
 <ul>
 <li>HEADER bearer TOKEN</li>
-<li>BODY Product</li>
+<li>BODY Product JSON Schema:
+<ul>
+<li>{<br>
+name: string,<br>
+description: string,<br>
+price: number,<br>
+inStockQuant: number,<br>
+imageURI: string<br>
+}</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Response

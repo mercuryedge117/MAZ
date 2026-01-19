@@ -221,9 +221,10 @@
 <ul>
 <li>BODY JSON Schema:<br>
 [{<br>
-_id: string,<br>
+id: string,<br>
 name: string,<br>
 description: string,<br>
+category: string,<br>
 price: number,<br>
 inStockQuant: number,<br>
 imageURI: string<br>
@@ -247,9 +248,10 @@ updateAt: Date<br>
 <ul>
 <li>BODY JSON Schema:<br>
 {<br>
-_id: string,<br>
+id: string,<br>
 name: string,<br>
 description: string,<br>
+category: string,<br>
 price: number,<br>
 inStockQuant: number,<br>
 imageURI: string<br>
@@ -279,6 +281,7 @@ updateAt: Date<br>
 _id: string,<br>
 name: string,<br>
 description: string,<br>
+category: string,<br>
 price: number,<br>
 inStockQuant: number,<br>
 imageURI: string<br>
@@ -303,6 +306,7 @@ updateAt: Date<br>
 <li>{<br>
 name: string,<br>
 description: string,<br>
+category: string,<br>
 price: number,<br>
 inStockQuant: number,<br>
 imageURI: string<br>
@@ -320,6 +324,7 @@ imageURI: string<br>
 _id: string,<br>
 name: string,<br>
 description: string,<br>
+category: string,<br>
 price: number,<br>
 inStockQuant: number,<br>
 imageURI: string<br>
@@ -350,6 +355,7 @@ updateAt: Date<br>
 _id: string,<br>
 name: string,<br>
 description: string,<br>
+category: string,<br>
 price: number,<br>
 inStockQuant: number,<br>
 imageURI: string<br>

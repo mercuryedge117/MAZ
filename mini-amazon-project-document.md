@@ -300,7 +300,7 @@ updateAt: Date<br>
 <ul>
 <li>POST /api/products
 <ul>
-<li>HEADER bearer TOKEN</li>
+<li>HEADER Authorization: Bearer TOKEN</li>
 <li>BODY Product JSON Schema:
 <ul>
 <li>{<br>
@@ -342,7 +342,7 @@ updateAt: Date<br>
 <ul>
 <li>PUT /api/products/{id}/
 <ul>
-<li>HEADER bearer TOKEN</li>
+<li>HEADER Authorization: Bearer TOKEN</li>
 <li>BODY Product</li>
 </ul>
 </li>
@@ -374,7 +374,7 @@ updateAt: Date<br>
 <ul>
 <li>DELETE /api/products/{id}/
 <ul>
-<li>HEADER bearer TOKEN</li>
+<li>HEADER Authorization: Bearer TOKEN</li>
 </ul>
 </li>
 <li>Response

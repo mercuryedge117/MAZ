@@ -124,6 +124,75 @@
 <td>no</td>
 </tr>
 </tbody>
+</table><h2 id="cart">Cart</h2>
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UserId</td>
+<td><a href="http://Obj.id">Obj.id</a></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Items</td>
+<td>string</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Subtotal</td>
+<td>number</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Discount</td>
+<td>number</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>total</td>
+<td>number</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>UpdateAt</td>
+<td>Date</td>
+<td>no</td>
+</tr>
+</tbody>
+</table><h2 id="items">Items</h2>
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ProductId</td>
+<td><a href="http://Obj.id">Obj.id</a></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Quantity</td>
+<td>number</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>PriceSnapShot</td>
+<td>number</td>
+<td>yes</td>
+</tr>
+</tbody>
 </table><h1 id="apis"><strong>APIs</strong></h1>
 <ul>
 <li>Server Side Port Number: 5200</li>
@@ -211,7 +280,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="product-wip">Product (WIP)</h2>
+<h2 id="product-1">Product</h2>
 <p><strong>Retrive all products</strong></p>
 <ul>
 <li>GET /api/products</li>
@@ -415,8 +484,8 @@ updateAt: Date<br>
 </ul>
 </li>
 </ul>
-<h2 id="cart-wip">Cart (WIP)</h2>
-<p><strong>Retrive cart item</strong></p>
+<h2 id="cart-1">Cart</h2>
+<p><strong>Retrive cart</strong></p>
 <ul>
 <li>GET /api/cart
 <ul>
@@ -425,24 +494,76 @@ updateAt: Date<br>
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 List of product in cart</li>
+<li>SUCESS 200
+<ul>
+<li>BODY JSON Schema:<br>
+{<br>
+products: cartItem[]:<br>
+{<br>
+product_id: string<br>
+product_name: string<br>
+product_imgUri: string<br>
+quantity: number<br>
+price_snapshot: number<br>
+}<br>
+subtotal: number<br>
+discount: number<br>
+total: number<br>
+updateAt: Date<br>
+}</li>
+</ul>
+</li>
 <li>FAILURE 403 You don’t have access</li>
+<li>FAILURE 500 Server Error</li>
+</ul>
+</li>
+</ul>
+<p><strong>Add cart item (triggered when add new item)</strong></p>
+<ul>
+<li>POST /api/cart/items
+<ul>
+<li>HEADER bearer TOKEN</li>
+<li>BODY {product_id: string}</li>
+</ul>
+</li>
+<li>Response
+<ul>
+<li>SUCESS 200 Item added</li>
+<li>FAILURE 403 You don’t have access</li>
+<li>FAILURE 404 Product not found</li>
 <li>FAILURE 500 Server Error</li>
 </ul>
 </li>
 </ul>
 <p><strong>Update cart item</strong></p>
 <ul>
-<li>PATCH /api/cart
+<li>PUT /api/cart/items/:productId
 <ul>
 <li>HEADER bearer TOKEN</li>
-<li>BODY Product id</li>
+<li>BODY {quantity: number}</li>
 </ul>
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 Updated list of product in cart</li>
+<li>SUCESS 200 Item updated</li>
 <li>FAILURE 403 You don’t have access</li>
+<li>FAILURE 404 Product not found</li>
+<li>FAILURE 500 Server Error</li>
+</ul>
+</li>
+</ul>
+<p><strong>Delete cart item  (triggered when remove last quantity)</strong></p>
+<ul>
+<li>PUT /api/cart/items/:productId
+<ul>
+<li>HEADER bearer TOKEN</li>
+</ul>
+</li>
+<li>Response
+<ul>
+<li>SUCESS 204 Item removed</li>
+<li>FAILURE 403 You don’t have access</li>
+<li>FAILURE 404 Product not found</li>
 <li>FAILURE 500 Server Error</li>
 </ul>
 </li>
@@ -456,8 +577,26 @@ updateAt: Date<br>
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 OK</li>
+<li>SUCESS 204 Cleared</li>
 <li>FAILURE 403 You don’t have access</li>
+<li>FAILURE 500 Server Error</li>
+</ul>
+</li>
+</ul>
+<p>** Apply promotion code **</p>
+<ul>
+<li>POST /api/cart/promo
+<ul>
+<li>HEADER bearer TOKEN</li>
+<li>BODY {Promocode: string}</li>
+</ul>
+</li>
+<li>Response
+<ul>
+<li>SUCESS 200 Applied</li>
+<li>FAILURE 403 You don’t have access</li>
+<li>FAILURE 404 Promocode not found</li>
+<li>FAILURE 409 Promocode already used</li>
 <li>FAILURE 500 Server Error</li>
 </ul>
 </li>

@@ -500,16 +500,17 @@ updateAt: Date<br>
 {<br>
 products: cartItem[]:<br>
 {<br>
-product_id: string<br>
-product_name: string<br>
-product_imgUri: string<br>
+productId: string<br>
+productName: string<br>
+productImgURI: string<br>
 quantity: number<br>
-price_snapshot: number<br>
+priceSnapshot: number<br>
+recentChangedPrice: boolean<br>
+recentChangedStock: boolean<br>
 }<br>
 subtotal: number<br>
 discount: number<br>
 total: number<br>
-updateAt: Date<br>
 }</li>
 </ul>
 </li>
@@ -528,22 +529,26 @@ updateAt: Date<br>
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 Item added<br>
-- BODY JSON Schema:<br>
+<li>SUCESS 200 Item added
+<ul>
+<li>BODY JSON Schema:<br>
 {<br>
-product:<br>
+products: cartItem[]:<br>
 {<br>
-product_id: string<br>
-product_name: string<br>
-product_imgUri: string<br>
+productId: string<br>
+productName: string<br>
+productImgURI: string<br>
 quantity: number<br>
-price_snapshot: number<br>
+priceSnapshot: number<br>
+recentChangedPrice: boolean<br>
+recentChangedStock: boolean<br>
 }<br>
 subtotal: number<br>
 discount: number<br>
 total: number<br>
-updateAt: Date<br>
 }</li>
+</ul>
+</li>
 <li>FAILURE 403 You don’t have access</li>
 <li>FAILURE 404 Product not found</li>
 <li>FAILURE 500 Server Error</li>
@@ -560,7 +565,26 @@ updateAt: Date<br>
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 Item updated</li>
+<li>SUCESS 200 Item updated
+<ul>
+<li>BODY JSON Schema:<br>
+{<br>
+products: cartItem[]:<br>
+{<br>
+productId: string<br>
+productName: string<br>
+productImgURI: string<br>
+quantity: number<br>
+priceSnapshot: number<br>
+recentChangedPrice: boolean<br>
+recentChangedStock: boolean<br>
+}<br>
+subtotal: number<br>
+discount: number<br>
+total: number<br>
+}</li>
+</ul>
+</li>
 <li>FAILURE 403 You don’t have access</li>
 <li>FAILURE 404 Product not found</li>
 <li>FAILURE 500 Server Error</li>
@@ -576,7 +600,26 @@ updateAt: Date<br>
 </li>
 <li>Response
 <ul>
-<li>SUCESS 204 Item removed</li>
+<li>SUCESS 200 Item removed
+<ul>
+<li>BODY JSON Schema:<br>
+{<br>
+products: cartItem[]:<br>
+{<br>
+productId: string<br>
+productName: string<br>
+productImgURI: string<br>
+quantity: number<br>
+priceSnapshot: number<br>
+recentChangedPrice: boolean<br>
+recentChangedStock: boolean<br>
+}<br>
+subtotal: number<br>
+discount: number<br>
+total: number<br>
+}</li>
+</ul>
+</li>
 <li>FAILURE 403 You don’t have access</li>
 <li>FAILURE 404 Product not found</li>
 <li>FAILURE 500 Server Error</li>

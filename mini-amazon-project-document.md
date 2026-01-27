@@ -539,6 +539,7 @@ productId: string<br>
 productName: string<br>
 productImgURI: string<br>
 quantity: number<br>
+inStockQuant: number<br>
 priceSnapshot: number<br>
 recentChangedPrice: boolean<br>
 recentChangedStock: boolean<br>
@@ -575,6 +576,7 @@ productId: string<br>
 productName: string<br>
 productImgURI: string<br>
 quantity: number<br>
+inStockQuant: number<br>
 priceSnapshot: number<br>
 recentChangedPrice: boolean<br>
 recentChangedStock: boolean<br>
@@ -610,6 +612,7 @@ productId: string<br>
 productName: string<br>
 productImgURI: string<br>
 quantity: number<br>
+inStockQuant: number<br>
 priceSnapshot: number<br>
 recentChangedPrice: boolean<br>
 recentChangedStock: boolean<br>

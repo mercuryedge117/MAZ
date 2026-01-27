@@ -528,7 +528,22 @@ updateAt: Date<br>
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 Item added</li>
+<li>SUCESS 200 Item added<br>
+- BODY JSON Schema:<br>
+{<br>
+product:<br>
+{<br>
+product_id: string<br>
+product_name: string<br>
+product_imgUri: string<br>
+quantity: number<br>
+price_snapshot: number<br>
+}<br>
+subtotal: number<br>
+discount: number<br>
+total: number<br>
+updateAt: Date<br>
+}</li>
 <li>FAILURE 403 You don’t have access</li>
 <li>FAILURE 404 Product not found</li>
 <li>FAILURE 500 Server Error</li>
@@ -554,7 +569,7 @@ updateAt: Date<br>
 </ul>
 <p><strong>Delete cart item  (triggered when remove last quantity)</strong></p>
 <ul>
-<li>PUT /api/cart/items/:productId
+<li>DELETE /api/cart/items/:productId
 <ul>
 <li>HEADER bearer TOKEN</li>
 </ul>

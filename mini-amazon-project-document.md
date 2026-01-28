@@ -679,7 +679,28 @@ total: number<br>
 </li>
 <li>Response
 <ul>
-<li>SUCESS 200 Applied</li>
+<li>SUCESS 200 Applied
+<ul>
+<li>BODY JSON Schema:<br>
+{<br>
+products: cartItem[]:<br>
+{<br>
+productId: string<br>
+productName: string<br>
+productImgURI: string<br>
+quantity: number<br>
+inStockQuant: number<br>
+priceSnapshot: number<br>
+recentChangedPrice: boolean<br>
+recentChangedStock: boolean<br>
+}<br>
+promoCode: string<br>
+subtotal: number<br>
+discount: number<br>
+total: number<br>
+}</li>
+</ul>
+</li>
 <li>FAILURE 403 You don’t have access</li>
 <li>FAILURE 404 Promocode not found</li>
 <li>FAILURE 409 Promocode already used</li>

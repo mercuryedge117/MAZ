@@ -146,8 +146,8 @@
 <td>yes</td>
 </tr>
 <tr>
-<td>UsedPromoCodes</td>
-<td>string[]</td>
+<td>PromoCode</td>
+<td>string</td>
 <td>no</td>
 </tr>
 <tr>
@@ -529,6 +529,7 @@ priceSnapshot: number<br>
 recentChangedPrice: boolean<br>
 recentChangedStock: boolean<br>
 }<br>
+promoCode: string<br>
 subtotal: number<br>
 discount: number<br>
 total: number<br>
@@ -565,6 +566,7 @@ priceSnapshot: number<br>
 recentChangedPrice: boolean<br>
 recentChangedStock: boolean<br>
 }<br>
+promoCode: string<br>
 subtotal: number<br>
 discount: number<br>
 total: number<br>
@@ -602,6 +604,7 @@ priceSnapshot: number<br>
 recentChangedPrice: boolean<br>
 recentChangedStock: boolean<br>
 }<br>
+promoCode: string<br>
 subtotal: number<br>
 discount: number<br>
 total: number<br>
@@ -638,6 +641,7 @@ priceSnapshot: number<br>
 recentChangedPrice: boolean<br>
 recentChangedStock: boolean<br>
 }<br>
+promoCode: string<br>
 subtotal: number<br>
 discount: number<br>
 total: number<br>

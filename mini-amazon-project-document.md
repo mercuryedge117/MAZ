@@ -193,11 +193,6 @@
 <td>yes</td>
 </tr>
 <tr>
-<td>InStockQuant</td>
-<td>number</td>
-<td>yes</td>
-</tr>
-<tr>
 <td>PriceSnapShot</td>
 <td>number</td>
 <td>yes</td>

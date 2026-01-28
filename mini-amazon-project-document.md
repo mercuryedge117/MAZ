@@ -202,16 +202,6 @@
 <td>number</td>
 <td>yes</td>
 </tr>
-<tr>
-<td>recentChanegdPrice</td>
-<td>boolean</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>recentChangedStock</td>
-<td>boolean</td>
-<td>yes</td>
-</tr>
 </tbody>
 </table><h1 id="apis"><strong>APIs</strong></h1>
 <ul>

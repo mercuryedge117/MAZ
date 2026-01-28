@@ -141,7 +141,7 @@
 <td>yes</td>
 </tr>
 <tr>
-<td>Items</td>
+<td>Products</td>
 <td>string</td>
 <td>yes</td>
 </tr>

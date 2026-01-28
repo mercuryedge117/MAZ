@@ -146,6 +146,11 @@
 <td>yes</td>
 </tr>
 <tr>
+<td>UsedPromoCodes</td>
+<td>string[]</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Subtotal</td>
 <td>number</td>
 <td>yes</td>
@@ -153,7 +158,7 @@
 <tr>
 <td>Discount</td>
 <td>number</td>
-<td>yes</td>
+<td>no</td>
 </tr>
 <tr>
 <td>total</td>
@@ -188,8 +193,23 @@
 <td>yes</td>
 </tr>
 <tr>
+<td>InStockQuant</td>
+<td>number</td>
+<td>yes</td>
+</tr>
+<tr>
 <td>PriceSnapShot</td>
 <td>number</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>recentChanegdPrice</td>
+<td>boolean</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>recentChangedStock</td>
+<td>boolean</td>
 <td>yes</td>
 </tr>
 </tbody>
@@ -504,6 +524,7 @@ productId: string<br>
 productName: string<br>
 productImgURI: string<br>
 quantity: number<br>
+inStockQuant: number<br>
 priceSnapshot: number<br>
 recentChangedPrice: boolean<br>
 recentChangedStock: boolean<br>

@@ -659,7 +659,7 @@ total: number<br>
 <li>POST /api/cart/promo
 <ul>
 <li>HEADER bearer TOKEN</li>
-<li>BODY {Promocode: string}</li>
+<li>BODY {promoCode: string}</li>
 </ul>
 </li>
 <li>Response

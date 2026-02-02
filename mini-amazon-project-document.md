@@ -550,6 +550,8 @@ inStockQuant: number<br>
 priceSnapshot: number<br>
 recentChangedPrice: boolean<br>
 recentChangedStock: boolean<br>
+avaliable: boolean<br>
+_id: string<br>
 }<br>
 promoCode: string<br>
 subtotal: number<br>
@@ -588,6 +590,8 @@ inStockQuant: number<br>
 priceSnapshot: number<br>
 recentChangedPrice: boolean<br>
 recentChangedStock: boolean<br>
+avaliable: boolean<br>
+_id: string<br>
 }<br>
 promoCode: string<br>
 subtotal: number<br>
@@ -625,6 +629,8 @@ inStockQuant: number<br>
 priceSnapshot: number<br>
 recentChangedPrice: boolean<br>
 recentChangedStock: boolean<br>
+avaliable: boolean<br>
+_id: string<br>
 }<br>
 promoCode: string<br>
 subtotal: number<br>
@@ -678,6 +684,8 @@ inStockQuant: number<br>
 priceSnapshot: number<br>
 recentChangedPrice: boolean<br>
 recentChangedStock: boolean<br>
+avaliable: boolean<br>
+_id: string<br>
 }<br>
 promoCode: string<br>
 subtotal: number<br>

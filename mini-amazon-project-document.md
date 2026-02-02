@@ -531,7 +531,7 @@ total: number<br>
 <li>POST /api/cart/items
 <ul>
 <li>HEADER bearer TOKEN</li>
-<li>BODY {product_id: string}</li>
+<li>BODY {productId: string}</li>
 </ul>
 </li>
 <li>Response
@@ -568,7 +568,7 @@ total: number<br>
 </ul>
 <p><strong>Update cart item</strong></p>
 <ul>
-<li>PUT /api/cart/items/:productId
+<li>PUT /api/cart/items/:id
 <ul>
 <li>HEADER bearer TOKEN</li>
 <li>BODY {quantity: number}</li>
@@ -608,7 +608,7 @@ total: number<br>
 </ul>
 <p><strong>Delete cart item  (triggered when remove last quantity)</strong></p>
 <ul>
-<li>DELETE /api/cart/items/:productId
+<li>DELETE /api/cart/items/:id
 <ul>
 <li>HEADER bearer TOKEN</li>
 </ul>
